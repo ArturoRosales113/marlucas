@@ -55,7 +55,6 @@ const DESKTOP_AREAS: Area[] = [
   },
 ];
 
-// Example: mobile version (you’ll tweak these based on your mobile design)
 const MOBILE_AREAS: Area[] = [
   {
     id: "Cámara",
@@ -113,23 +112,19 @@ export default function Home() {
       return next;
     });
   };
+
   const handlePreSaveClick = () => {
     const link = document.createElement("a");
-    link.href = "/Mar_Luca_Media_Pack.zip"; // ruta desde /public
-    link.download = "Mar_Luca_Media_Pack.zip"; // nombre del archivo
+    link.href = "/Mar_Luca_Media_Pack.zip";
+    link.download = "Mar_Luca_Media_Pack.zip";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
-  const resetGame = () => {
-    setIsModalOpen(false);
-    setClickedAreas([]);
-  };
-
   return (
     <div className="relative h-screen w-screen overflow-hidden">
-      <div className="absolute top-[6%] w-full h-32 z-50 mx-auto block lg:hidden  ">
+      <div className="absolute top-[6%] w-full h-32 z-50 mx-auto block lg:hidden">
         <Image
           src="/IMG_4108.PNG"
           alt="Cosas de Superstar background"
@@ -214,7 +209,7 @@ export default function Home() {
             />
           ))}
 
-          {/* MOBILE CLICKABLE AREAS – update these values manually */}
+          {/* MOBILE CLICKABLE AREAS */}
           {MOBILE_AREAS.map((area) => (
             <button
               key={area.id}
@@ -260,7 +255,7 @@ export default function Home() {
                 onClick={handlePreSaveClick}
                 className="bg-[#ff6fd0] hover:bg-[#ff8ad9] text-white font-semibold rounded-full px-6 sm:px-10 py-2 sm:py-3 text-xs sm:text-sm md:text-base shadow-md whitespace-nowrap"
               >
-                pre-save "Cosas de Superstar"
+                pre-save &quot;Cosas de Superstar&quot;
               </button>
             </div>
           </div>
