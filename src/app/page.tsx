@@ -251,7 +251,7 @@ export default function Home() {
             {/* Button row */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <a
-                href="https://orcd.co/cds-marlucas"
+                href="https://orcd.co/marlucas-cds"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#ff6fd0] hover:bg-[#ff8ad9] text-white font-semibold rounded-full px-6 sm:px-10 py-2 sm:py-3 text-xs sm:text-sm md:text-base shadow-md whitespace-nowrap"
