@@ -106,7 +106,7 @@ export default function Home() {
     setClickedAreas((prev) => {
       if (prev.includes(id)) return prev;
       const next = [...prev, id];
-      if (next.length === DESKTOP_AREAS.length) {
+      if (next.length === 3) {
         setIsModalOpen(true);
       }
       return next;
@@ -241,7 +241,7 @@ export default function Home() {
 
           {/* Modal card (on top of backdrop) */}
           <div className="relative text-white rounded-[40px] max-w-[550px] w-[90%] flex flex-col items-center text-center gap-4 sm:gap-6">
-            <div className="bg-[#ff4fb5] shadow-2xl px-6 sm:px-12 py-6 sm:py-8 rounded-[40px]">
+            <div className="border border-[#ff4fb5] shadow-2xl px-6 sm:px-12 py-6 sm:py-8 rounded-[40px]">
               <p className="text-sm sm:text-xl md:text-2xl font-bold leading-snug sm:leading-snug md:leading-snug">
                 Haz pre-save para reclamar tu póster oficial, wallpapers y
                 sticker pack
@@ -250,12 +250,20 @@ export default function Home() {
 
             {/* Button row */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
+              <a
+                href="https://orcd.co/cds-marlucas"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#ff6fd0] hover:bg-[#ff8ad9] text-white font-semibold rounded-full px-6 sm:px-10 py-2 sm:py-3 text-xs sm:text-sm md:text-base shadow-md whitespace-nowrap"
+              >
+                Pre-save &quot;Cosas de Superstar&quot;
+              </a>
               <button
                 type="button"
                 onClick={handlePreSaveClick}
                 className="bg-[#ff6fd0] hover:bg-[#ff8ad9] text-white font-semibold rounded-full px-6 sm:px-10 py-2 sm:py-3 text-xs sm:text-sm md:text-base shadow-md whitespace-nowrap"
               >
-                pre-save &quot;Cosas de Superstar&quot;
+                Descarga
               </button>
             </div>
           </div>
